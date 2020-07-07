@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="macbase64" value="">
+    <input type="text" id="encode" value="">
+    <p>
+        <input type="button" id="create_btn" value="生成">
+    </p>
+    <p>
+        <input type="button" id="getcode" value="获取激活码">
+    </p>
+    <script>
+      document.getElementById("getcode").addEventListener("click", function(){
+
+        v = document.getElementById("encode");
+        v.value = require('electron').remote.getGlobal('saveDefault').encode;
+
+        });
+    </script>
+    
+</body>
+</html>

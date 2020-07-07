@@ -1,0 +1,29 @@
+{
+  "name": "apppro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "app-builder-lib": "^22.7.0",
+    "builder-util": "^22.7.0",
+    "chalk": "^4.1.0",
+    "electron-json-storage": "^4.1.8",
+    "is-ci": "^2.0.0",
+    "macaddress": "^0.5.1",
+    "read-config-file": "^6.0.0",
+    "update-notifier": "^4.1.0",
+    "yargs": "^15.4.0"
+  },
+  "build": {
+    "win": {
+      "icon": "build/icons/icon256.ico"
+    }
+  }
+}

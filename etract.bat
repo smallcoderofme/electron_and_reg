@@ -1,0 +1,1 @@
+C:\Users\Administrator\Desktop\apppro>asar extract C:\Users\Administrator\Desktop\apppro\dist\win-unpacked\resources\app.asar .\extract

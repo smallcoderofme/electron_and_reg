@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <style type="text/css">
+      html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0; 
+            padding: 0;
+        }
+        .content {
+            width: 300px;
+            height: 300px;
+            margin: 20% auto; 
+        }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <p>
+        机器码：<input type="text" id="maccode" style="width: 100%" value="44455666"/>
+        <input type="button" id="mac_btn" value="获取机器码"/>
+      </p>
+
+      <p>
+        注册码：<textarea id="regincode" value="44455666" 
+        style="width: 100%; height:200px;overflow:scroll;resize:none;"></textarea>
+        <input type="button" id="regin_btn" value="注册"/>
+      </p>
+    </div>
+    
+    <script>
+      document.getElementById("mac_btn").addEventListener("click", function(){
+        v = document.getElementById("maccode");
+        v.value = require('electron').remote.getGlobal('saveDefault').mac;
+      });
+    </script>
+  </body>
+</html>
